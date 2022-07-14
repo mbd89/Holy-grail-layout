@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Mockup</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: " header header "
+                       " sidebar nav "
+                       " sidebar article "
+                       " footer footer ";
+                       gap: 4px;
+}
+
+.container div {
+  padding: 15px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+.header {
+  background-color: #393f4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+
+.menu ul,
+.menu li {
+  font-size: 16px;
+  list-style: none;
+
+}
+.menu ul{
+    display: flex;
+    gap: 50px;
+}
+
+.sidebar {
+  background-color: #FF7755;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+
+.sidebar .photo {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+  min-height: 100px;
+  
+}
+
+
+.sidebar .side-content {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  flex: 200px;
+  flex-shrink: 0;
+  
+}
+
+.nav {
+  background-color: #FF7755;
+  grid-area: nav;
+}
+
+.nav ul li {
+  font-size: 16px;
+  text-transform: uppercase;
+  list-style: none;
+}
+.nav ul {
+    display: flex;
+   justify-content: space-between;
+}
+
+.article {
+  background-color: #bccbde;
+  grid-area: article;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.article p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.article .card {
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+  height: 200px;
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #393f4d;
+  grid-area: footer;
+}
+
+.footer p {
+  font-size: 13px;
+  font-weight: normal;  
+}
+ @media screen and (max-width:1020px){
+ .container{
+  display:flex;
+  flex-direction: column;
+ } 
+.sidebar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sidebar .side-content{
+  
+  
+  min-height: 100px;
+}
+
+ }
+
+
+
+ @media screen and (max-width:499px){
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+}
+.nav{
+  display: flex;
+  flex-direction: column;
+}
+
+ }
+
+ 
+ 
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <div class="logo">Header Logo</div>
+        <div class="menu">
+          <ul>
+            <li>header link one</li>
+            <li>header link two</li>
+            <li>header link three</li>
+            <li>header link four</li>
+          </ul>
+        </div>
+      </div>
+
+   
+
+      <div class="nav">
+        <ul>
+          <li>Latest Articles</li>
+          <li>Most Views</li>
+          <li>Featured</li>
+        </ul>
+      </div>
+
+      <div class="article">
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+        <div class="card">
+          <p class="title">Article Title</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="photo">
+          <p>placeholder for image</p>    
+        </div>
+        <div class="side-content">Box 1
+        </div>
+        <div class="side-content">Box 2
+        </div>
+        <div class="side-content">Box 3
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Copyright © The Odin Project 2021
+      </div>
+      
+    </div>
+  </body>
+</html>
